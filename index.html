@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jargon Simplifier</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://unpkg.com/lottie-web@5.7.4/build/player/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="form-wrapper bg-white rounded shadow-sm p-4">
+
+      <h3 class="text-center mb-4">Jargon Simplifier</h3>
+
+        <form onsubmit="event.preventDefault(); simplifyText();" onreset="resetText()">
+          <div class="mb-3">
+            <label for="audience" class="form-label">Choose Audience Level:</label>
+            <select id="audience" class="form-select">
+              <option value="general audience">General Audience</option>
+              <option value="school kid">10-year-old</option>
+              <option value="non-technical friend">Non-technical Friend</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="inputText" class="form-label">Technical Text:</label>
+            <textarea id="inputText" class="form-control" rows="6"
+              placeholder="Paste your technical text here..."></textarea>
+          </div>
+          <div class="d-flex pt-2 justify-content-center">
+            <button id="submitBtn" type="submit" class="btn btn-primary w-10">Simplify</button>
+            <button id="resetBtn" type="reset" class="btn btn-danger w-10 mx-3">Reset</button>
+          </div>
+        </form>
+
+        <div id="lottieLoader" class="d-flex justify-content-center">
+          <div id="lottieAnimation"></div>
+        </div>
+
+        <label id="outputTextLabel" for="outputText" class="form-label"><strong>Response:</strong></label>
+        <div class="output mt-2" id="outputText"></div>
+    
+    </div>
+  </div>
+</body>
+
+</html>
