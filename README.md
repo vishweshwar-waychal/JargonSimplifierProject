@@ -23,6 +23,16 @@ A simple and smart web application that simplifies complex or technical text usi
 
 ---
 
+## 🧠 Prompt Engineering
+
+This app uses a dynamically generated prompt based on user input and selected audience. Here's how the prompt is formed internally:
+
+```js
+const prompt = `Simplify the following technical text for a ${audience}:\n\n"${inputText}"\n\nAvoid jargon and make it easy to understand. Only respond in plain English.`;
+```
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript, Bootstrap 5
