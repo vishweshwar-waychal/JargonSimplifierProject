@@ -30,6 +30,9 @@ This app uses a dynamically generated prompt based on user input and selected au
 ```js
 const prompt = `Simplify the following technical text for a ${audience}:\n\n"${inputText}"\n\nAvoid jargon and make it easy to understand. Only respond in plain English.`;
 ```
+- ${audience} is selected from a dropdown (e.g., 10-year-old, general audience, non-technical friend)
+- ${inputText} is what the user types into the textbox
+- The prompt ensures the model avoids jargon and explains clearly in plain English
 
 ---
 
